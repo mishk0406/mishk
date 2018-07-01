@@ -1,0 +1,24 @@
+<!--pages/dict/dict.wxml-->
+<view class="contains">
+  <view  class="about-img"><image src="{{img}}"  class="in-img" background-size="cover"></image></view>
+  <view class="title">{{title}}</view>
+
+  <view class="ppicker">
+    <picker class='picker' bindchange="bindPickerChange1" value="{{fromIndex}}" range="{{fromarray}}">
+      {{fromarray[fromIndex]}}
+    </picker>
+    <view><image src="{{huhuanimg}}"  class="huhuan-img" background-size="cover"></image></view>
+    <picker class='picker' bindchange="bindPickerChange2" value="{{toIndex}}" range="{{toarray}}">
+      {{toarray[toIndex]}}
+    </picker>
+  </view>
+   <textarea class='btn-area' placeholder="输入你想翻译的内容" focus="{{textFoucs}}" value="{{textvalue}}" bindinput="charChange"></textarea> 
+  <view class="btn">
+    <button bindtap="dict">翻译</button>
+  </view>
+  
+  <view class='show-result' wx:if="{{isShowResult}}">
+    {{resultValue}}
+  </view>
+  <view class='footer'>如需更多语言查询信息，请点击更多->我的微信联系我！</view>
+</view>

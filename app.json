@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/dict/dict",
+    "pages/switchcity/switchcity",
+    "pages/map/map",
+    "pages/deliveryinput/deliveryinput",
+    "pages/deliveryshow/deliveryshow",
+    "pages/more/more",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2a579a",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "position": "top",
+    "backgroundColor": "#2a579a",
+    "color": "#DCEDC8",
+    "selectedColor": "#DCEDC8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "周边"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "text": "娱乐"
+      },
+      {
+        "pagePath": "pages/deliveryinput/deliveryinput",
+        "text": "快递"
+      },
+      {
+        "pagePath": "pages/dict/dict",
+        "text": "翻译"
+      }
+    ]
+  }
+}

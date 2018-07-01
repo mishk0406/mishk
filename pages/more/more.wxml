@@ -1,0 +1,140 @@
+<view class='moreTab'>
+  <view class="{{selsectState[0]?'moreSelected':''}}" bindtap='clickDict'>
+    <image class="icon-image" src="{{selsectState[0]?'../../images/font-red.png':'../../images/font-gray.png'}}"/>
+    <view class='tabText'>段子</view>   
+  </view>
+  <view class="{{selsectState[1]?'moreSelected':''}}" bindtap='clickExpre'>
+    <image class="icon-image" src="{{selsectState[1]?'../../images/redio-red.png':'../../images/redio-gray.png'}}"/>
+    <view class='tabText'>视频</view>
+  </view>
+  <view class="{{selsectState[2]?'moreSelected':''}}" bindtap='clickMore'>
+    <image class="icon-image" src="{{selsectState[2]?'../../images/photo-red.png':'../../images/photo-gray.png'}}"/>
+    <view class='tabText more'>趣图</view>
+  </view>
+</view>
+
+<view class="more_container"> 
+  
+  <!--段子-->
+  <scroll-view scroll-y="true" class="container" lower-threshold="5" bindscrolltolower="lower" wx:if='{{selsectState[0]}}'>
+      <block wx:for="{{jokes}}">
+          <view class="feed-item">
+              <view class="feed-source">
+                  <a>
+                      <view class="avatar">
+                          <image src="{{item.profile_image}}"></image>
+                      </view>
+                      <text>{{item.name}}</text>
+                  </a>
+              </view>
+              <view class="feed-content">
+                  <view class="answer-body">
+                      <view bindtap="bindItemTap">
+                          <text class="answer-txt" style="line-height:1.5" aid="{{answer_id}}">{{item.text}}</text>
+                      </view>
+                      <view class="answer-actions" bindtap="bindItemTap">
+                          <view class="like dot">
+                              <a>{{item.love}} 顶</a>   
+                          </view>
+                          <view class="comments dot">
+                              <a>{{item.hate}} 踩 </a>
+                          </view>
+                          <text class="item-more" style="float: right;#a0acac">{{item.create_time}}</text>
+                          <!--<view class="follow-it">
+                              <a>关注问题</a>
+                          </view>-->
+                      </view>
+                  </view>
+              </view>
+          </view>
+      </block>
+  </scroll-view>
+
+  <!--视频-->
+  <scroll-view scroll-y="true" class="container"  lower-threshold="5" bindscrolltolower="lower" wx:if='{{selsectState[1]}}'>
+
+      <block wx:for="{{jokes}}">
+          <view class="feed-item">
+              <view class="feed-source">
+                  <a>
+                      <view class="avatar">
+                          <image src="{{item.profile_image}}"></image>
+                      </view>
+                      <text>{{item.name}}</text>
+                  </a>
+              </view>
+              <view class="feed-content">
+                  <view class="question" qid="{{question_id}}" bindtap="bindQueTap">
+                      <a class="question-link">
+                          <!--<text>{{item.text}}</text>-->
+                          <video src="{{item.video_uri}}"></video>
+                      </a>
+                  </view>
+                  <view class="answer-body">
+                      <view bindtap="bindItemTap">
+                          <text class="answer-txt" aid="{{answer_id}}">{{item.text}}</text>
+                      </view>
+                      <view class="answer-actions" bindtap="bindItemTap">
+                          <view class="like dot">
+                              <a>{{item.love}} 顶 </a>
+                          </view>
+                          <view class="comments dot">
+                              <a>{{item.hate}} 踩 </a>
+                          </view>
+                          <text class="item-more" style="float: right;#a0acac">{{item.create_time}}</text>
+                          <!--<view class="follow-it">
+                              <a>关注问题</a>
+                          </view>-->
+                      </view>
+                  </view>
+              </view>
+          </view>
+      </block>
+  </scroll-view>
+
+
+
+
+  <!--趣图-->
+  <scroll-view scroll-y="true" class="container"  lower-threshold="5" bindscrolltolower="lower" wx:if='{{selsectState[2]}}'>
+
+
+      <block wx:for="{{jokes}}">
+          <view class="feed-item">
+              <view class="feed-source">
+                  <a>
+                      <view class="avatar">
+                          <image src="{{item.profile_image}}"></image>
+                      </view>
+                      <text>{{item.name}}</text>
+                  </a>
+              </view>
+              <view class="feed-content">
+                  <view class="question" qid="{{question_id}}" bindtap="bindQueTap">
+                      <a class="question-link">
+                          <!--<text>{{item.text}}</text>-->
+                          <image mode="aspectFill" data-imgUrl="{{item.image0}}" bindtap="previewImg" src="{{item.image0}}"></image>
+                      </a>
+                  </view>
+                  <view class="answer-body">
+                      <view bindtap="bindItemTap">
+                          <text class="answer-txt" aid="{{answer_id}}">{{item.text}}</text>
+                      </view>
+                      <view class="answer-actions" bindtap="bindItemTap">
+                          <view class="like dot">
+                              <a>{{item.love}} 顶 </a>
+                          </view>
+                          <view class="comments dot">
+                              <a>{{item.hate}} 踩 </a>
+                          </view>
+                          <text class="item-more" style="float: right;#a0acac">{{item.create_time}}</text>
+                          <!--<view class="follow-it">
+                              <a>关注问题</a>
+                          </view>-->
+                      </view>
+                  </view>
+              </view>
+          </view>
+      </block>
+  </scroll-view>
+</view> 

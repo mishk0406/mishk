@@ -1,0 +1,60 @@
+/* pages/dict/dict.wxss */
+.contains{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  margin-bottom: 20px
+}
+.title{
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  font-size: 30rpx;
+}
+.inpicker{
+  float: left
+}
+.itemView{
+  float: left
+}
+.ppicker{
+  font-size: 16px;line-height: 2;margin-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.picker{
+  /* border: 1px solid #2a579a; */
+  width: 250rpx;
+  background: #f8f8f8;
+  /* margin-top: 20rpx; */
+}
+.about-img{ display: block;margin: 20px auto 0;}
+.in-img{width: 44px;height: 44px}
+.huhuan-img{width: 20px;height: 20px}
+.footer{
+  font-size: 23rpx;
+  color: #666;
+  margin-top: 60rpx;
+  text-align: center;
+}
+.btn{
+  margin-top: 40rpx;
+}
+.btn-area{
+  margin-top: 20rpx;
+  border: 1px solid #f6f6f6;
+  height: 180rpx;
+  width:100%;
+  font-size: 30rpx;
+}
+.show-result{
+  display: hidden;
+  margin-top: 20rpx;
+  height: 180rpx;
+  font-size: 30rpx;
+  background: #f6f6f6;
+  padding: 20rpx 20rpx;
+}

@@ -1,0 +1,23 @@
+<!--pages/deliveryinput/deliveryinput.wxml-->
+<view class="contains">
+  <view  class="about-img"><image src="{{imgTop}}"  class="in-img" background-size="cover"></image></view>
+  <view class="title">{{title}}</view>
+
+  <view class="ppicker">
+    <picker bindchange="bindPickerChange" value="{{areaIndex}}" range="{{area}}">
+      <view class="inpicker">快递公司：</view>
+      {{area[areaIndex]}}
+    </picker>
+   <view class="asd">
+     <view  class="input">快递单号：</view>
+     <input placeholder="请输入单号" bindinput="passWdInput" class="number" value="{{show}}" />
+     <view><image src="{{imgCode}}" class="code-img" bindtap="qrcode"></image></view>
+   </view>
+ </view>
+
+<view class="btn">
+  <navigator url="../../pages/deliveryshow/deliveryshow?type={{userName}}&postid={{userPwd}}" >
+  <button class="loginBtn" type="primary">点击查询</button></navigator>
+</view>
+<view class='footer'>如需更多快递公司查询信息，请点击更多->我的微信联系我！</view>
+</view>

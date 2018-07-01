@@ -1,0 +1,44 @@
+/* pages/deliveryinput/deliveryinput.wxss */
+.contains{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  margin-bottom: 20px
+}
+.title{
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  font-size: 24px;
+}
+.ppicker{
+  font-size: 16px;line-height: 2;text-indent: 2em;margin-top: 20px
+}
+.inpicker{
+  float: left
+}
+.itemView{
+  float: left
+}
+.asd{
+  margin-top: 20rpx;
+  display: flex;
+}
+.input{
+float: left
+}
+.btn{
+  margin-top: 20rpx;
+}
+.about-img{ display: block;margin: 20px auto 0;}
+.in-img{width: 124px;height: 124px}
+
+.footer{
+  font-size: 23rpx;
+  color: #666;
+  margin-top: 60rpx;
+  text-align: center;
+}
+
+.code-img{width:20px;height:20px;}

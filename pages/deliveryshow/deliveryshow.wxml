@@ -1,0 +1,12 @@
+<!--pages/deliveryshow/deliveryshow.wxml-->
+<view class="container">
+  <!--循环输出列表begin-->
+
+  <view wx:for="{{contexts}}" wx:key="key" >
+    <view class="infor">
+      <text space="flase">{{item.ftime}}\n{{item.context}}</text>
+    </view>
+  </view> 
+  <!--循环输出列表end-->
+<toast hidden="{{toastHidden}}" bindchange="toastChange" duration="5000">单号填写错误！</toast>
+</view> 

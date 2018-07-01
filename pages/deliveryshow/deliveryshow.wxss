@@ -1,0 +1,11 @@
+/* pages/deliveryshow/deliveryshow.wxss */
+.container {
+  height: 100%;
+  padding: 20rpx;
+}
+
+.infor {
+  font-size: 10px;
+  width: 90%;
+  padding: 20rpx 0 0 20rpx;
+}
